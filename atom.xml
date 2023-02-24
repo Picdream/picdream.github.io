@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>拾梦</title>
+  <icon>http://picdream.cn/icon.png</icon>
+  
+  <link href="http://picdream.cn/atom.xml" rel="self"/>
+  
+  <link href="http://picdream.cn/"/>
+  <updated>2022-07-04T14:16:06.000Z</updated>
+  <id>http://picdream.cn/</id>
+  
+  <author>
+    <name>Mr.Wei</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Makefile构建stm32重定向串口printf</title>
+    <link href="http://picdream.cn/archives/10002.html"/>
+    <id>http://picdream.cn/archives/10002.html</id>
+    <published>2022-10-13T11:49:56.350Z</published>
+    <updated>2022-07-04T14:16:06.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h2 id=&quot;一、串口重定向&quot;&gt;&lt;a href=&quot;#一、串口重定向&quot; class=&quot;headerlink&quot; title=&quot;一、串口重定向&quot;&gt;&lt;/a&gt;一、串口重定向&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Makefile" scheme="http://picdream.cn/tags/Makefile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Markdown的语法</title>
+    <link href="http://picdream.cn/archives/ebd52ec9.html"/>
+    <id>http://picdream.cn/archives/ebd52ec9.html</id>
+    <published>2022-10-13T11:49:55.263Z</published>
+    <updated>2022-07-08T10:40:14.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;以下是Markdwm的一些常用到的基本语法&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用openocd烧录程序</title>
+    <link href="http://picdream.cn/archives/342954a3.html"/>
+    <id>http://picdream.cn/archives/342954a3.html</id>
+    <published>2022-10-13T11:49:55.056Z</published>
+    <updated>2022-07-04T12:36:36.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;一、openocd介绍&quot;&gt;&lt;a href=&quot;#一、openocd介绍&quot; class=&quot;headerlink&quot; title=&quot;一、openocd介绍&quot;&gt;&lt;/a&gt;一、openocd介绍&lt;/h2&gt;&lt;p&gt;OpenOCD（Open On-Chip Debugger）是一个开源的片上调试器，旨在提供针对嵌入式设备的调试、系统编程和边界扫描功能。OpenOCD的功能需要调试仿真器来辅助完成，调试仿真器是一个提供调试目标电信号的小型硬件单元。常用的有JLink、STLink等，一些开发板直接集成了调试仿真器，如小熊派开发板就集成了STLink。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>11、Qt程序打包</title>
+    <link href="http://picdream.cn/archives/6291345.html"/>
+    <id>http://picdream.cn/archives/6291345.html</id>
+    <published>2022-06-29T00:00:00.000Z</published>
+    <updated>2022-07-09T10:04:14.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Qt的应用程序编译出来之后,将单独的exe程序拿到其他PC上运行是运行不起来的,会提示缺少对应的动态链接库。我们需要去Qt的安装目录下找到所有的Qt程序运行时所依赖的，将他们和exe程序放到同一目录下，程序才可以执行。&lt;/p&gt;
+&lt;p&gt;根据上边的描述我们可以想象的到，如果手动去寻找应用程序依赖的动态库，这是一件非常麻烦的事情。其实我们完全没有必要这么辛苦，Qt给我们提供了一个寻找依赖项的工具windeployqt&lt;/p&gt;
+&lt;p&gt;Windeployqt的使用方法：&lt;br&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    
+    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>10、数库操作</title>
+    <link href="http://picdream.cn/archives/6251621.html"/>
+    <id>http://picdream.cn/archives/6251621.html</id>
+    <published>2022-06-25T00:00:00.000Z</published>
+    <updated>2022-07-09T06:07:42.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;10-1-数据库操作&quot;&gt;&lt;a href=&quot;#10-1-数据库操作&quot; class=&quot;headerlink&quot; title=&quot;10.1 数据库操作&quot;&gt;&lt;/a&gt;10.1 数据库操作&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Qt&lt;/strong&gt; &lt;strong&gt;提供了 QtSQL 模块来提供平台独立的基于 SQL 的数据库操作。&lt;/strong&gt;这里我们所说的“平台独立”，既包括操作系统平台，有包括各个数据库平台。另外，我们强调了“基于 SQL”，因为 NoSQL 数据库至今没有一个通用查询方法，所以不可能提供一种通用的 NoSQL 数据库的操作。&lt;strong&gt;Qt 的数据库操作还可以很方便的与 model&amp;#x2F;view 架构进行整合。&lt;/strong&gt;通常来说，我们对数据库的操作更多地在于对数据库表的操作，而这正是 model&amp;#x2F;view 架构的长项。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    
+    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>9、多线程</title>
+    <link href="http://picdream.cn/archives/6231331.html"/>
+    <id>http://picdream.cn/archives/6231331.html</id>
+    <published>2022-06-23T00:00:00.000Z</published>
+    <updated>2022-07-09T09:59:04.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;通常情况下，应用程序都是在一个线程中执行操作。但是，当调用一个耗时操作（例如，大批量I&amp;#x2F;O或大量矩阵变换等CPU密集操作）时，用户界面常常会冻结。而使用多线程可以解决这一问题。&lt;/p&gt;
+&lt;p&gt;多线程有以下几个优势：&lt;br&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    
+    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>8、Socket通信</title>
+    <link href="http://picdream.cn/archives/6211508.html"/>
+    <id>http://picdream.cn/archives/6211508.html</id>
+    <published>2022-06-21T00:00:00.000Z</published>
+    <updated>2022-07-10T08:01:20.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Qt中提供的所有的Socket类都是非阻塞的。&lt;/p&gt;
+&lt;p&gt;Qt中常用的用于socket通信的套接字类:&lt;br&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    
+    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7、文件系统</title>
+    <link href="http://picdream.cn/archives/6181735.html"/>
+    <id>http://picdream.cn/archives/6181735.html</id>
+    <published>2022-06-18T00:00:00.000Z</published>
+    <updated>2022-07-09T09:58:28.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;文件操作是应用程序必不可少的部分。Qt 作为一个通用开发库，提供了跨平台的文件操作能力。Qt 通过QIODevice提供了对 I&amp;#x2F;O 设备的抽象，这些设备具有读写字节块的能力。下面是 I&amp;#x2F;O 设备的类图（Qt5）：&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    
+    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6、绘图和绘图设备</title>
+    <link href="http://picdream.cn/archives/6171531.html"/>
+    <id>http://picdream.cn/archives/6171531.html</id>
+    <published>2022-06-17T00:00:00.000Z</published>
+    <updated>2022-07-09T09:58:52.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;6-1-QPainter&quot;&gt;&lt;a href=&quot;#6-1-QPainter&quot; class=&quot;headerlink&quot; title=&quot;6.1 QPainter&quot;&gt;&lt;/a&gt;6.1 QPainter&lt;/h2&gt;&lt;p&gt;Qt 的绘图系统允许使用相同的 API 在屏幕和其它打印设备上进行绘制。整个绘图系统基于QPainter，QPainterDevice和QPaintEngine三个类。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;QPainter&lt;/strong&gt;用来执行绘制的操作；&lt;strong&gt;QPaintDevice&lt;/strong&gt;是一个二维空间的抽象，这个二维空间允许QPainter在其上面进行绘制，也就是QPainter工作的空间；&lt;strong&gt;QPaintEngine&lt;/strong&gt;提供了画笔（QPainter）在不同的设备上进行绘制的统一的接口。QPaintEngine类应用于QPainter和QPaintDevice之间，通常对开发人员是透明的。除非你需要自定义一个设备，否则你是不需要关心QPaintEngine这个类的。我们可以把QPainter理解成画笔；把QPaintDevice理解成使用画笔的地方，比如纸张、屏幕等；而对于纸张、屏幕而言，肯定要使用不同的画笔绘制，为了统一使用一种画笔，我们设计了QPaintEngine类，这个类让不同的纸张、屏幕都能使用一种画笔。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    
+    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5、Qt消息机制和事件</title>
+    <link href="http://picdream.cn/archives/61270931.html"/>
+    <id>http://picdream.cn/archives/61270931.html</id>
+    <published>2022-06-12T00:00:00.000Z</published>
+    <updated>2022-07-09T09:58:50.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;5-1-事件&quot;&gt;&lt;a href=&quot;#5-1-事件&quot; class=&quot;headerlink&quot; title=&quot;5.1 事件&quot;&gt;&lt;/a&gt;5.1 事件&lt;/h2&gt;&lt;p&gt;事件（event）是由系统或者 Qt 本身在不同的时刻发出的。当用户按下鼠标、敲下键盘，或者是窗口需要重新绘制的时候，都会发出一个相应的事件。一些事件在对用户操作做出响应时发出，如键盘事件等；另一些事件则是由系统自动发出，如计时器事件。&lt;/p&gt;
+&lt;p&gt;在前面我们也曾经简单提到，&lt;strong&gt;Qt 程序&lt;/strong&gt;需要在main()函数创建一个QApplication对象，然后调用它的exec()函数。这个函数就是开始 Qt 的事件循环。在执行exec()函数之后，程序将进入事件循环来监听应用程序的事件。当事件发生时，Qt 将创建一个事件对象。&lt;strong&gt;Qt 中所有事件类都继承于QEvent&lt;/strong&gt;。在事件对象创建完毕后，Qt 将这个事件对象传递给QObject的event()函数。&lt;strong&gt;event()函数并不直接处理事件，而是按照事件对象的类型分派给特定的事件处理函数&lt;/strong&gt;（event handler），关于这一点，会在后边详细说明。&lt;/p&gt;
+&lt;p&gt;在所有组件的父类QWidget中，定义了很多事件处理的回调函数，如&lt;br&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    
+    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4、Qt窗口系统</title>
+    <link href="http://picdream.cn/archives/61071251.html"/>
+    <id>http://picdream.cn/archives/61071251.html</id>
+    <published>2022-06-10T00:00:00.000Z</published>
+    <updated>2022-07-09T10:05:08.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;4-1-Qt窗口坐标体系&quot;&gt;&lt;a href=&quot;#4-1-Qt窗口坐标体系&quot; class=&quot;headerlink&quot; title=&quot;4.1 Qt窗口坐标体系&quot;&gt;&lt;/a&gt;4.1 Qt窗口坐标体系&lt;/h2&gt;&lt;h3 id=&quot;坐标体系&quot;&gt;&lt;a href=&quot;#坐标体系&quot; class=&quot;headerlink&quot; title=&quot;坐标体系&quot;&gt;&lt;/a&gt;坐标体系&lt;/h3&gt;&lt;p&gt;以左上角为原点，X向右增加，Y向下增加。&lt;/p&gt;
+&lt;p&gt;​                            &lt;img src=&quot;/photos/image011.png&quot; alt=&quot;QT&quot;&gt;   &lt;/p&gt;
+&lt;p&gt;对于嵌套窗口，其坐标是&lt;strong&gt;相对于父窗口&lt;/strong&gt;来说的。&lt;/p&gt;
+&lt;h2 id=&quot;4-2-QWidget&quot;&gt;&lt;a href=&quot;#4-2-QWidget&quot; class=&quot;headerlink&quot; title=&quot;4.2 QWidget&quot;&gt;&lt;/a&gt;4.2 QWidget&lt;/h2&gt;&lt;p&gt;所有窗口及窗口控件都是从QWidget直接或间接派生出来的。&lt;/p&gt;
+&lt;h3 id=&quot;4-2-1-对象模型&quot;&gt;&lt;a href=&quot;#4-2-1-对象模型&quot; class=&quot;headerlink&quot; title=&quot;4.2.1 对象模型&quot;&gt;&lt;/a&gt;4.2.1 对象模型&lt;/h3&gt;&lt;p&gt;在Qt中创建对象的时候会提供一个Parent对象指针，下面来解释这个parent到底是干什么的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;QObject是以对象树的形式组织起来的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当你创建一个QObject对象时，会看到QObject的构造函数接收一个QObject指针作为参数，这个参数就是 parent，也就是父对象指针。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这相当于，&lt;strong&gt;在创建QObject对象时，可以提供一个其父对象，我们创建的这个QObject对象会自动添加到其父对象的children()列表。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;当父对象析构的时候，这个列表中的所有对象也会被析构。（注意，这里的父对象并不是继承意义上的父类！）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这种机制在 GUI 程序设计中相当有用。例如，一个按钮有一个QShortcut（快捷键）对象作为其子对象。当我们删除按钮的时候，这个快捷键理应被删除。这是合理的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;QWidget是能够在屏幕上显示的一切组件的父类。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;QWidget****继承自QObject，因此也继承了这种对象树关系。一个孩子自动地成为父组件的一个子组件&lt;/strong&gt;。因此，它会显示在父组件的坐标系统中，被父组件的边界剪裁。例如，当用户关闭一个对话框的时候，应用程序将其删除，那么，我们希望属于这个对话框的按钮、图标等应该一起被删除。事实就是如此，因为这些都是对话框的子组件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当然，&lt;strong&gt;我们也可以自己删除子对象，它们会自动从其父对象列表中删除。&lt;/strong&gt;比如，当我们删除了一个工具栏时，其所在的主窗口会自动将该工具栏从其子对象列表中删除，并且自动调整屏幕显示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Qt 引入对象树的概念，在一定程度上解决了内存问题。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;当一个QObject对象在堆上创建的时候，Qt 会同时为其创建一个对象树。不过，对象树中对象的顺序是没有定义的。这意味着，销毁这些对象的顺序也是未定义的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;任何对象树中的 QObject对象 delete 的时候，如果这个对象有 parent，则自动将其从 parent 的children()列表中删除；如果有孩子，则自动 delete 每一个孩子。Qt 保证没有QObject会被 delete 两次，这是由析构顺序决定的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果QObject在栈上创建，Qt 保持同样的行为。正常情况下，这也不会发生什么问题。来看下下面的代码片段：&lt;br&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    
+    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3、信号和槽机制</title>
+    <link href="http://picdream.cn/archives/60870931.html"/>
+    <id>http://picdream.cn/archives/60870931.html</id>
+    <published>2022-06-08T00:00:00.000Z</published>
+    <updated>2022-07-09T09:58:44.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;信号槽是 Qt 框架引以为豪的机制之一。所谓信号槽，实际就是观察者模式。&lt;strong&gt;当某个事件发生之后&lt;/strong&gt;，比如，按钮检测到自己被点击了一下，&lt;strong&gt;它就会发出一个信号（signal）&lt;/strong&gt;。这种发出是没有目的的，类似广播。&lt;strong&gt;如果有对象对这个信号感兴趣，它就会使用连接（connect）函数&lt;/strong&gt;，意思是，&lt;strong&gt;将想要处理的信号和自己的一个函数（称为槽（slot））绑定来处理这个信号&lt;/strong&gt;。也就是说，&lt;strong&gt;当信号发出时，被连接的槽函数会自动被回调&lt;/strong&gt;。这就类似观察者模式：当发生了感兴趣的事件，某一个操作就会被自动触发。（这里提一句，Qt 的信号槽使用了额外的处理来实现，并不是 GoF 经典的观察者模式的实现方式。）&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    
+    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2、创建Qt项目</title>
+    <link href="http://picdream.cn/archives/6051431.html"/>
+    <id>http://picdream.cn/archives/6051431.html</id>
+    <published>2022-06-05T00:00:00.000Z</published>
+    <updated>2022-07-09T09:58:42.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;2-1-使用向导创建&quot;&gt;&lt;a href=&quot;#2-1-使用向导创建&quot; class=&quot;headerlink&quot; title=&quot;2.1 使用向导创建&quot;&gt;&lt;/a&gt;2.1 使用向导创建&lt;/h2&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    
+    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1、Qt概述</title>
+    <link href="http://picdream.cn/archives/6041302.html"/>
+    <id>http://picdream.cn/archives/6041302.html</id>
+    <published>2022-06-04T13:20:03.000Z</published>
+    <updated>2022-07-09T07:38:30.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-1-什么是Qt&quot;&gt;&lt;a href=&quot;#1-1-什么是Qt&quot; class=&quot;headerlink&quot; title=&quot;1.1 什么是Qt&quot;&gt;&lt;/a&gt;1.1 什么是Qt&lt;/h2&gt;&lt;p&gt;Qt是一个&lt;strong&gt;跨平台&lt;/strong&gt;的C++&lt;strong&gt;图形用户界面应用程序框架&lt;/strong&gt;。它为应用程序开发者提供建立艺术级图形界面所需的所有功能。它是完全面向对象的，很容易扩展，并且允许真正的组件编程。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    
+    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序</title>
+    <link href="http://picdream.cn/archives/10001.html"/>
+    <id>http://picdream.cn/archives/10001.html</id>
+    <published>2018-11-23T13:20:03.000Z</published>
+    <updated>2022-07-04T12:25:12.000Z</updated>
+    
+    
+    <summary type="html">文章已被加密，可输入密码查看</summary>
+    
+    
+    
+    
+    <category term="java" scheme="http://picdream.cn/tags/java/"/>
+    
+  </entry>
+  
+</feed>
