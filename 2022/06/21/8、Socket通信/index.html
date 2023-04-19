@@ -23,25 +23,21 @@
     var CONFIG = {"hostname":"picdream.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true,"Pisces | Gemini":240},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="6.1 QPainterQt 的绘图系统允许使用相同的 API 在屏幕和其它打印设备上进行绘制。整个绘图系统基于QPainter，QPainterDevice和QPaintEngine三个类。 QPainter用来执行绘制的操作；QPaintDevice是一个二维空间的抽象，这个二维空间允许QPainter在其上面进行绘制，也就是QPainter工作的空间；QPaintEngine提供了画笔（QP">
+  <meta name="description" content="Qt中提供的所有的Socket类都是非阻塞的。 Qt中常用的用于socket通信的套接字类:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="6、绘图和绘图设备">
-<meta property="og:url" content="http://picdream.cn/archives/6171531.html">
+<meta property="og:title" content="8、Socket通信">
+<meta property="og:url" content="https://picdream.cn/2022/06/21/8%E3%80%81Socket%E9%80%9A%E4%BF%A1/index.html">
 <meta property="og:site_name" content="拾梦">
-<meta property="og:description" content="6.1 QPainterQt 的绘图系统允许使用相同的 API 在屏幕和其它打印设备上进行绘制。整个绘图系统基于QPainter，QPainterDevice和QPaintEngine三个类。 QPainter用来执行绘制的操作；QPaintDevice是一个二维空间的抽象，这个二维空间允许QPainter在其上面进行绘制，也就是QPainter工作的空间；QPaintEngine提供了画笔（QP">
+<meta property="og:description" content="Qt中提供的所有的Socket类都是非阻塞的。 Qt中常用的用于socket通信的套接字类:">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://picdream.cn/photos/image027.png">
-<meta property="og:image" content="http://picdream.cn/photos/image028.png">
-<meta property="og:image" content="http://picdream.cn/photos/image029.png">
-<meta property="article:published_time" content="2022-06-17T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-07-09T09:58:52.000Z">
+<meta property="article:published_time" content="2022-06-21T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-04-07T10:15:35.715Z">
 <meta property="article:author" content="Mr.Wei">
 <meta property="article:tag" content="Qt">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://picdream.cn/photos/image027.png">
 
-<link rel="canonical" href="http://picdream.cn/archives/6171531.html">
+<link rel="canonical" href="https://picdream.cn/2022/06/21/8%E3%80%81Socket%E9%80%9A%E4%BF%A1/">
 
 
 <script id="page-configurations">
@@ -54,7 +50,7 @@
   };
 </script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
-  <title>6、绘图和绘图设备 | 拾梦
+  <title>8、Socket通信 | 拾梦
 </title>
   
 
@@ -166,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-resume">
 
-    <a href="https://picdream.cn/resume.github.io/" rel="section"><i class="fa fa-fw fa-user-secret"></i>个人简历</a>
+    <a href="https://picdream.github.io/resume.github.io/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-user-secret"></i>个人简历</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -229,11 +225,19 @@
     <div class="post-block" lang="zh-CN">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">6、绘图和绘图设备
+<h1 class="post-title" itemprop="name headline">8、Socket通信
 </h1>
 
 <div class="post-meta">
   
+  <ul class="breadcrumb">
+          
+            <li><a href="/2022/">2022</a></li>
+            <li><a href="/2022/06/">06</a></li>
+            <li><a href="/2022/06/21/">21</a></li>
+            <li><a href="/2022/06/21/8%E3%80%81Socket%E9%80%9A%E4%BF%A1/">8、SOCKET通信</a></li>
+            <li><a href="/2022/06/21/8%E3%80%81Socket%E9%80%9A%E4%BF%A1//"></a></li>
+  </ul>
 
 </div>
 
@@ -243,89 +247,151 @@
       
       
       <div class="post-body">
-          <h2 id="6-1-QPainter"><a href="#6-1-QPainter" class="headerlink" title="6.1 QPainter"></a>6.1 QPainter</h2><p>Qt 的绘图系统允许使用相同的 API 在屏幕和其它打印设备上进行绘制。整个绘图系统基于QPainter，QPainterDevice和QPaintEngine三个类。</p>
-<p><strong>QPainter</strong>用来执行绘制的操作；<strong>QPaintDevice</strong>是一个二维空间的抽象，这个二维空间允许QPainter在其上面进行绘制，也就是QPainter工作的空间；<strong>QPaintEngine</strong>提供了画笔（QPainter）在不同的设备上进行绘制的统一的接口。QPaintEngine类应用于QPainter和QPaintDevice之间，通常对开发人员是透明的。除非你需要自定义一个设备，否则你是不需要关心QPaintEngine这个类的。我们可以把QPainter理解成画笔；把QPaintDevice理解成使用画笔的地方，比如纸张、屏幕等；而对于纸张、屏幕而言，肯定要使用不同的画笔绘制，为了统一使用一种画笔，我们设计了QPaintEngine类，这个类让不同的纸张、屏幕都能使用一种画笔。</p>
- <span id="more"></span>
-<p>下图给出了这三个类之间的层次结构:</p>
-<p><img src="/photos/image027.png" alt="Qt"></p>
-<p>上面的示意图告诉我们，<strong>Qt 的绘图系统实际上是，使用QPainter在QPainterDevice上进行绘制，它们之间使用QPaintEngine进行通讯（也就是翻译QPainter的指令）。</strong></p>
-<p>下面我们通过一个实例来介绍QPainter的使用：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">PaintedWidget</span> : <span class="keyword">public</span> QWidget</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  Q_OBJECT</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">  <span class="built_in">PaintedWidget</span>(QWidget *parent = <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">paintEvent</span><span class="params">(QPaintEvent *)</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>注意我们重写了QWidget的paintEvent()函数。接下来就是PaintedWidget的源代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">PaintedWidget::<span class="built_in">PaintedWidget</span>(QWidget *parent) :</span><br><span class="line"></span><br><span class="line">  <span class="built_in">QWidget</span>(parent)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">resize</span>(<span class="number">800</span>, <span class="number">600</span>);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">setWindowTitle</span>(<span class="built_in">tr</span>(<span class="string">&quot;Paint Demo&quot;</span>));</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">PaintedWidget::paintEvent</span><span class="params">(QPaintEvent *)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function">QPainter <span class="title">painter</span><span class="params">(<span class="keyword">this</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawLine</span>(<span class="number">80</span>, <span class="number">100</span>, <span class="number">650</span>, <span class="number">500</span>);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">setPen</span>(Qt::red);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawRect</span>(<span class="number">10</span>, <span class="number">10</span>, <span class="number">100</span>, <span class="number">400</span>);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">setPen</span>(<span class="built_in">QPen</span>(Qt::green, <span class="number">5</span>));</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">setBrush</span>(Qt::blue);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawEllipse</span>(<span class="number">50</span>, <span class="number">150</span>, <span class="number">400</span>, <span class="number">200</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在构造函数中，我们仅仅设置了窗口的大小和标题。而paintEvent()函数则是绘制的代码。首先，我们在栈上创建了一个QPainter对象，也就是说，每次运行paintEvent()函数的时候，都会重建这个QPainter对象。注意，这一点可能会引发某些细节问题：由于我们每次重建QPainter，因此第一次运行时所设置的画笔颜色、状态等，第二次再进入这个函数时就会全部丢失。有时候我们希望保存画笔状态，就必须自己保存数据，否则的话则需要将QPainter作为类的成员变量。</p>
-<p>QPainter接收一个QPaintDevice指针作为参数。QPaintDevice有很多子类，比如QImage，以及QWidget。注意回忆一下，QPaintDevice可以理解成要在哪里去绘制，而现在我们希望画在这个组件，因此传入的是 this 指针。</p>
-<p>QPainter有很多以 draw 开头的函数，用于各种图形的绘制，比如这里的drawLine()，drawRect()以及drawEllipse()等。当绘制轮廓线时，使用QPainter的pen()属性。比如，我们调用了painter.setPen(Qt::red)将 pen设置为红色，则下面绘制的矩形具有红色的轮廓线。接下来，我们将 pen修改为绿色，5 像素宽（painter.setPen(QPen(Qt::green, 5))），又设置了画刷为蓝色。这时候再调用 draw 函数，则是具有绿色 5 像素宽轮廓线、蓝色填充的椭圆。</p>
-<h2 id="6-2-绘图设备"><a href="#6-2-绘图设备" class="headerlink" title="6.2 绘图设备"></a>6.2 绘图设备</h2><p><strong>绘图设备是指继承QPainterDevice的子类。</strong>Qt一共提供了四个这样的类，分别是QPixmap、QBitmap、QImage和 QPicture。其中，</p>
+          <p>Qt中提供的所有的Socket类都是非阻塞的。</p>
+<p>Qt中常用的用于socket通信的套接字类:<br> <span id="more"></span></p>
 <ul>
-<li><p>QPixmap专门为图像在屏幕上的显示做了优化</p>
+<li>QTcpServer</li>
+</ul>
+<p>用于TCP&#x2F;IP通信, 作为服务器端套接字使用</p>
+<ul>
+<li>QTcpSocket</li>
+</ul>
+<p>用于TCP&#x2F;IP通信，作为客户端套接字使用。</p>
+<ul>
+<li>QUdpSocket</li>
+</ul>
+<p>用于UDP通信，服务器，客户端均使用此套接字。</p>
+<h2 id="8-1-TCP-x2F-IP"><a href="#8-1-TCP-x2F-IP" class="headerlink" title="8.1 TCP&#x2F;IP"></a>8.1 TCP&#x2F;IP</h2><p>在Qt中实现TCP&#x2F;IP服务器端通信的流程:</p>
+<ul>
+<li><p>创建套接字</p>
 </li>
-<li><p>QBitmap是QPixmap的一个子类，它的色深限定为1，可以使用 QPixmap的isQBitmap()函数来确定这个QPixmap是不是一个QBitmap。</p>
+<li><p>将套接字设置为监听模式</p>
 </li>
-<li><p>QImage专门为图像的像素级访问做了优化。 </p>
-</li>
-<li><p>QPicture则可以记录和重现QPainter的各条命令。</p>
+<li><p>等待并接受客户端请求</p>
 </li>
 </ul>
-<h3 id="6-2-1-QPixmap、QBitmap、QImage"><a href="#6-2-1-QPixmap、QBitmap、QImage" class="headerlink" title="6.2.1 QPixmap、QBitmap、QImage"></a>6.2.1 QPixmap、QBitmap、QImage</h3><p>QPixmap继承了QPaintDevice，因此，你可以使用QPainter直接在上面绘制图形。QPixmap也可以接受一个字符串作为一个文件的路径来显示这个文件，比如你想在程序之中打开png、jpeg之类的文件，就可以使用 QPixmap。使用QPainter的drawPixmap()函数可以把这个文件绘制到一个QLabel、QPushButton或者其他的设备上面。<strong>QPixmap是针对屏幕进行特殊优化的，因此，它与实际的底层显示设备息息相关。</strong>注意，这里说的显示设备并不是硬件，而是操作系统提供的原生的绘图引擎。所以，在不同的操作系统平台下，QPixmap的显示可能会有所差别。</p>
-<p><strong>QBitmap</strong>继承自QPixmap，因此具有QPixmap的所有特性，提供单色图像<strong>。QBitmap的色深始终为1. 色深这个概念来自计算机图形学，是指用于表现颜色的二进制的位数。我们知道，计算机里面的数据都是使用二进制表示的。为了表示一种颜色，我们也会使用二进制。比如我们要表示8种颜色，需要用3个二进制位，这时我们就说色深是3. 因此，所谓色深为1，也就是使用1个二进制位表示颜色。1个位只有两种状态：0和1，因此它所表示的颜色就有两种，黑和白。所以说，</strong>QBitmap实际上是只有黑白两色的图像数据。</p>
-<p><strong>由于QBitmap色深小，因此只占用很少的存储空间，所以适合做光标文件和笔刷。</strong></p>
-<p>下面我们来看同一个图像文件在QPixmap和QBitmap下的不同表现：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">PaintWidget::paintEvent</span><span class="params">(QPaintEvent *)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function">QPixmap <span class="title">pixmap</span><span class="params">(<span class="string">&quot;:/Image/butterfly.png&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">QPixmap <span class="title">pixmap1</span><span class="params">(<span class="string">&quot;:/Image/butterfly1.png&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">QBitmap <span class="title">bitmap</span><span class="params">(<span class="string">&quot;:/Image/butterfly.png&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">QBitmap <span class="title">bitmap1</span><span class="params">(<span class="string">&quot;:/Image/butterfly1.png&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">QPainter <span class="title">painter</span><span class="params">(<span class="keyword">this</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawPixmap</span>(<span class="number">0</span>, <span class="number">0</span>, pixmap);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawPixmap</span>(<span class="number">200</span>, <span class="number">0</span>, pixmap1);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawPixmap</span>(<span class="number">0</span>, <span class="number">130</span>, bitmap);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawPixmap</span>(<span class="number">200</span>, <span class="number">130</span>, bitmap1);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/photos/image028.png" alt="Qt"></p>
-<p>这里我们给出了两张png图片。butterfly1.png是没有透明色的纯白背景，而butterfly.png是具有透明色的背景。我们分别使用QPixmap和QBitmap来加载它们。注意看它们的区别：白色的背景在QBitmap中消失了，而透明色在QBitmap中转换成了黑色；其他颜色则是使用点的疏密程度来体现的。</p>
-<p>QPixmap使用底层平台的绘制系统进行绘制，无法提供像素级别的操作，而<strong>QImage则是使用独立于硬件的绘制系统，实际上是自己绘制自己，因此提供了像素级别的操作，并且能够在不同系统之上提供一个一致的显示形式。</strong></p>
-<p>我们声明了一个QImage对象，大小是300 x 300，颜色模式是RGB32，即使用32位数值表示一个颜色的RGB值，也就是说每种颜色使用8位。然后我们对每个像素进行颜色赋值，从而构成了这个图像。我们可以把QImage想象成一个RGB颜色的二维数组，记录了每一像素的颜色。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">PaintWidget::paintEvent</span><span class="params">(QPaintEvent *)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function">QPainter <span class="title">painter</span><span class="params">(<span class="keyword">this</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">QImage <span class="title">image</span><span class="params">(<span class="number">300</span>, <span class="number">300</span>, QImage::Format_RGB32)</span></span>;</span><br><span class="line"></span><br><span class="line">  QRgb value;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//将图片背景填充为白色</span></span><br><span class="line"></span><br><span class="line">  image.<span class="built_in">fill</span>(Qt::white);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//改变指定区域的像素点的值</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">50</span>; i&lt;<span class="number">100</span>; ++i)</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">50</span>; j&lt;<span class="number">100</span>; ++j)</span><br><span class="line"></span><br><span class="line">​    &#123;</span><br><span class="line"></span><br><span class="line">​      value = <span class="built_in">qRgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">// 红色</span></span><br><span class="line"></span><br><span class="line">​      image.<span class="built_in">setPixel</span>(i, j, value);</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//将图片绘制到窗口中</span></span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawImage</span>(<span class="built_in">QPoint</span>(<span class="number">0</span>, <span class="number">0</span>), image);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/photos/image029.png" alt="Qt"></p>
-<p>QImage与QPixmap的区别</p>
+<p>可以通过QTcpServer提供的void <strong>newConnection()</strong> <strong>信号</strong>来检测是否有连接请求，如果有可以在对应的槽函数中调用nextPendingConnection函数获取到客户端的Socket信息（返回值为QTcpSocket*类型指针），通过此套接字与客户端之间进行通信。</p>
 <ul>
-<li><p>QPixmap主要是用于绘图，针对屏幕显示而最佳化设计，QImage主要是为图像I&#x2F;O、图片访问和像素修改而设计的</p>
+<li><p>接收或者向客户端发送数据</p>
 </li>
-<li><p>QPixmap依赖于所在的平台的绘图引擎，故例如反锯齿等一些效果在不同的平台上可能会有不同的显示效果，QImage使用Qt自身的绘图引擎，可在不同平台上具有相同的显示效果</p>
+<li><p>接收数据：使用read()或者readAll()函数</p>
 </li>
-<li><p>由于QImage是独立于硬件的，也是一种QPaintDevice，因此我们可以在另一个线程中对其进行绘制，而不需要在GUI线程中处理，使用这一方式可以很大幅度提高UI响应速度。</p>
-</li>
-<li><p>QImage可通过setPixpel()和pixel()等方法直接存取指定的像素。</p>
+<li><p>发送数据：使用write（）函数</p>
 </li>
 </ul>
-<p>QImage与QPixmap之间的转换:</p>
+<p>客户端通信流程:</p>
 <ul>
-<li>QImage转QPixmap</li>
+<li><p>创建套接字</p>
+</li>
+<li><p>连接服务器</p>
+</li>
 </ul>
-<p>​		使用QPixmap的静态成员函数: fromImage()</p>
-<p>​		QPixmap  fromImage(const QImage &amp; image, </p>
-<p>​		Qt::ImageConversionFlags flags &#x3D; Qt::AutoColor)</p>
+<p>可以使用QTcpSocket类的<strong>connectToHost（）</strong>函数来连接服务器。</p>
 <ul>
-<li>QPixmap转QImage:</li>
+<li>向服务器发送或者接受数据</li>
 </ul>
-<p>​		使用QPixmap类的成员函数: toImage()</p>
-<p>​		QImage toImage() const</p>
-<h3 id="6-2-2-QPicture"><a href="#6-2-2-QPicture" class="headerlink" title="6.2.2 QPicture"></a>6.2.2 QPicture</h3><p>最后一个需要说明的是QPicture。<strong>这是一个可以记录和重现QPainter命令的绘图设备。</strong> <strong>QPicture将QPainter的命令序列化到一个IO设备，保存为一个平台独立的文件格式。</strong>这种格式有时候会是“元文件(metan files)”。Qt的这种格式是二进制的，不同于某些本地的元文件，Qt的pictures文件没有内容上的限制，只要是能够被QPainter绘制的元素，不论是字体还是pixmap，或者是变换，都可以保存进一个picture中。</p>
-<p><strong>QPicture****是平台无关的</strong>，因此它可以使用在多种设备之上，比如svg、pdf、ps、打印机或者屏幕。回忆下我们这里所说的QPaintDevice，实际上是说可以有QPainter绘制的对象。QPicture使用系统的分辨率，并且可以调整 QPainter来消除不同设备之间的显示差异。</p>
-<p>如果我们要记录下QPainter的命令，首先要使用QPainter::begin()函数，将QPicture实例作为参数传递进去，以便告诉系统开始记录，记录完毕后使用QPainter::end()命令终止。代码示例如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">PaintWidget::paintEvent</span><span class="params">(QPaintEvent *)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  QPicture pic;</span><br><span class="line"></span><br><span class="line">  QPainter painter;</span><br><span class="line"></span><br><span class="line">   <span class="comment">//将图像绘制到QPicture中,并保存到文件</span></span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">begin</span>(&amp;pic);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawEllipse</span>(<span class="number">20</span>, <span class="number">20</span>, <span class="number">100</span>, <span class="number">50</span>);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">fillRect</span>(<span class="number">20</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>, Qt::red);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">end</span>();</span><br><span class="line"></span><br><span class="line">  pic.<span class="built_in">save</span>(<span class="string">&quot;D://drawing.pic&quot;</span>);</span><br><span class="line"> </span><br><span class="line">   <span class="comment">//将保存的绘图动作重新绘制到设备上</span></span><br><span class="line"></span><br><span class="line">  pic.<span class="built_in">load</span>(<span class="string">&quot;D://drawing.pic&quot;</span>);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">begin</span>(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawPicture</span>(<span class="number">200</span>, <span class="number">200</span>, pic);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">end</span>();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下面例子为简单的TCP&#x2F;IP通信的实现:</p>
+<h3 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line">通过Qt提供的QTcpServer类实现服务器端的socket通信:</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------- tcpserver.h ------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TCPServer</span> : <span class="keyword">public</span> QMainWindow</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  Q_OBJECT</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">explicit</span> <span class="title">TCPServer</span><span class="params">(QWidget *parent = <span class="number">0</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  ~<span class="built_in">TCPServer</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> slots:</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">slotNewConnection</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">slotReadyRead</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"></span><br><span class="line">  Ui::TCPServer *ui;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 负责监听的套接字</span></span><br><span class="line"></span><br><span class="line">  QTcpServer* m_server;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 负责通信的套接字</span></span><br><span class="line"></span><br><span class="line">  QTcpSocket* m_client;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------- tcpserver.cpp ------------</span></span><br><span class="line"></span><br><span class="line">TCPServer::<span class="built_in">TCPServer</span>(QWidget *parent) :</span><br><span class="line"></span><br><span class="line">  <span class="built_in">QMainWindow</span>(parent),</span><br><span class="line"></span><br><span class="line">  <span class="built_in">ui</span>(<span class="keyword">new</span> Ui::TCPServer),</span><br><span class="line"></span><br><span class="line">  <span class="built_in">m_server</span>(<span class="literal">NULL</span>),</span><br><span class="line"></span><br><span class="line">  <span class="built_in">m_client</span>(<span class="literal">NULL</span>)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  ui-&gt;<span class="built_in">setupUi</span>(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//创建套接字对象</span></span><br><span class="line"></span><br><span class="line">  m_server = <span class="keyword">new</span> <span class="built_in">QTcpServer</span>(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//将套接字设置为监听模式</span></span><br><span class="line"></span><br><span class="line">  m_server-&gt;<span class="built_in">listen</span>(QHostAddress::Any, <span class="number">9999</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//通过信号接收客户端请求</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">connect</span>(m_server, &amp;QTcpServer::newConnection, </span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>, &amp;TCPServer::slotNewConnection);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">TCPServer::~<span class="built_in">TCPServer</span>()</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">delete</span> ui;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">TCPServer::slotNewConnection</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(m_client == <span class="literal">NULL</span>)</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">​    <span class="comment">//处理客户端的连接请求</span></span><br><span class="line"></span><br><span class="line">​    m_client = m_server-&gt;<span class="built_in">nextPendingConnection</span>();</span><br><span class="line"></span><br><span class="line">​    <span class="comment">//发送数据</span></span><br><span class="line"></span><br><span class="line">​    m_client-&gt;<span class="built_in">write</span>(<span class="string">&quot;服务器连接成功!!!&quot;</span>);</span><br><span class="line"></span><br><span class="line">​    <span class="comment">//连接信号, 接收客户端数据</span></span><br><span class="line"></span><br><span class="line">​    <span class="built_in">connect</span>(m_client, &amp;QTcpSocket::readyRead, </span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>, &amp;TCPServer::slotReadyRead);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">TCPServer::slotReadyRead</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//接收数据</span></span><br><span class="line"></span><br><span class="line">  QByteArray array = m_client-&gt;<span class="built_in">readAll</span>();</span><br><span class="line"></span><br><span class="line">  QMessageBox::<span class="built_in">information</span>(<span class="keyword">this</span>, <span class="string">&quot;Client Message&quot;</span>, array);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line">客户端通过使用Qt提供的QTcpSocket类可以方便的实现与服务器端的通信。</span><br><span class="line"></span><br><span class="line"><span class="comment">//------------- tcpclient.h ------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TCPClient</span> : <span class="keyword">public</span> QMainWindow</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  Q_OBJECT</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">explicit</span> <span class="title">TCPClient</span><span class="params">(QWidget *parent = <span class="number">0</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  ~<span class="built_in">TCPClient</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> slots:</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">slotReadyRead</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">slotSendMsg</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"></span><br><span class="line">  Ui::TCPClient *ui;</span><br><span class="line"></span><br><span class="line">  QTcpSocket* m_client;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//------------- tcpclient.cpp --------------</span></span><br><span class="line"></span><br><span class="line">TCPClient::<span class="built_in">TCPClient</span>(QWidget *parent) :</span><br><span class="line"></span><br><span class="line">  <span class="built_in">QMainWindow</span>(parent),</span><br><span class="line"></span><br><span class="line">  <span class="built_in">ui</span>(<span class="keyword">new</span> Ui::TCPClient)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  ui-&gt;<span class="built_in">setupUi</span>(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//创建套接字</span></span><br><span class="line"></span><br><span class="line">  m_client = <span class="keyword">new</span> <span class="built_in">QTcpSocket</span>(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//连接服务器</span></span><br><span class="line"></span><br><span class="line">  m_client-&gt;<span class="built_in">connectToHost</span>(<span class="built_in">QHostAddress</span>(<span class="string">&quot;127.0.0.1&quot;</span>), <span class="number">9999</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//通过信号接收服务器数据</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">connect</span>(m_client, &amp;QTcpSocket::readyRead, </span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>, &amp;TCPClient::slotReadyRead);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//发送按钮</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">connect</span>(ui-&gt;btnSend, &amp;QPushButton::clicked, </span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>, &amp;TCPClient::slotSendMsg);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">TCPClient::~<span class="built_in">TCPClient</span>()</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">delete</span> ui;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">TCPClient::slotReadyRead</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="comment">//接收数据</span></span><br><span class="line"></span><br><span class="line">  QByteArray array = m_client-&gt;<span class="built_in">readAll</span>();</span><br><span class="line"></span><br><span class="line">  QMessageBox::<span class="built_in">information</span>(<span class="keyword">this</span>, <span class="string">&quot;Server Message&quot;</span>, array);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">TCPClient::slotSendMsg</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  QString text = ui-&gt;textEdit-&gt;<span class="built_in">toPlainText</span>();</span><br><span class="line"></span><br><span class="line">   <span class="comment">//发送数据</span></span><br><span class="line"></span><br><span class="line">  m_client-&gt;<span class="built_in">write</span>(text.<span class="built_in">toUtf8</span>());</span><br><span class="line"></span><br><span class="line">  ui-&gt;textEdit-&gt;<span class="built_in">clear</span>();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-
-
-
-
-
-
-
-
-
+<h2 id="8-2-UDP"><a href="#8-2-UDP" class="headerlink" title="8.2 UDP"></a>8.2 UDP</h2><p>使用Qt提供的QUdpSocket进行UDP通信。<strong>在UDP方式下，客户端并不与服务器建立连接，它只负责调用发送函数向服务器发送数据</strong>。类似的<strong>服务器也不从客户端接收连接，只负责调用接收函数，等待来自客户端的数据的到达</strong>。</p>
+<p>在UDP通信中，服务器端和客户端的概念已经显得有些淡化，两部分做的工作都大致相同：</p>
+<ul>
+<li><p>创建套接字</p>
+</li>
+<li><p>绑定套接字</p>
+</li>
+</ul>
+<p>在UDP中如果需要<strong>接收数据</strong>则<strong>需要对套接字进行绑定</strong>，只发送数据则不需要对套接字进行绑定。</p>
+<p>通过调用bind（）函数将套接字绑定到指定端口上。</p>
+<ul>
+<li><p>接收或者发送数据</p>
+</li>
+<li><p>接收数据：使用readDatagram()接收数据,函数声明如下:</p>
+</li>
+</ul>
+<p>​		qint64 readDatagram(char * data, qint64 maxSize, </p>
+<p>​		QHostAddress * address &#x3D; 0, quint16 * port &#x3D; 0)</p>
+<ul>
+<li>参数:</li>
+</ul>
+<p>​	data: 接收数据的缓存地址</p>
+<p>​	maxSize: 缓存接收的最大字节数</p>
+<p>​	address: 数据发送方的地址（一般使用提供的默认值）</p>
+<p>​	port: 数据发送方的端口号（一般使用提供的默认值）</p>
+<p>使用<strong>pendingDatagramSize()可以获取到将要接收的数据的大小</strong>，根据该函数返回值来准备对应大小的内存空间存放将要接收的数据。</p>
+<ul>
+<li>发送数据: 使用writeDatagram()函数发送数据，函数声明如下：</li>
+</ul>
+<p>​		qint64 writeDatagram(const QByteArray &amp; datagram, </p>
+<p>​		const QHostAddress &amp; host, quint16 port)</p>
+<ul>
+<li>参数：</li>
+</ul>
+<p>​		datagram：要发送的字符串</p>
+<p>​		host：数据接收方的地址</p>
+<p>​		port：数据接收方的端口号</p>
+<h3 id="广播"><a href="#广播" class="headerlink" title="广播"></a>广播</h3><p>在使用QUdpSocket类的writeDatagram()函数发送数据的时候，其中第二个参数host应该指定为广播地址：QHostAddress：：Broadcast此设置相当于QHostAddress(“255.255.255.255”)</p>
+<p>使用UDP广播的的特点：</p>
+<ul>
+<li><p>使用UDP进行广播，局域网内的其他的UDP用户全部可以收到广播的消息</p>
+</li>
+<li><p>UDP广播只能在局域网范围内使用</p>
+</li>
+</ul>
+<h3 id="组播"><a href="#组播" class="headerlink" title="组播"></a>组播</h3><p>我们再使用广播发送消息的时候会发送给所有用户，但是有些用户是不想接受消息的，这时候我们就应该使用组播，接收方只有先注册到组播地址中才能收到组播消息，否则则接受不到消息。另外组播是可以在Internet中使用的。</p>
+<p>在使用QUdpSocket类的writeDatagram()函数发送数据的时候，其中第二个参数host应该指定为组播地址，关于组播地址的分类：</p>
+<ul>
+<li><p>224.0.0.0～224.0.0.255为预留的组播地址（永久组地址），地址224.0.0.0保留不做分配，其它地址供路由协议使用；</p>
+</li>
+<li><p>224.0.1.0～224.0.1.255是公用组播地址，可以用于Internet；</p>
+</li>
+<li><p>224.0.2.0～238.255.255.255为用户可用的组播地址（临时组地址），全网范围内有效；</p>
+</li>
+<li><p>239.0.0.0～239.255.255.255为本地管理组播地址，仅在特定的本地范围内有效。</p>
+</li>
+</ul>
+<p>注册加入到组播地址需要使用QUdpSocket类的成员函数：</p>
+<p>bool  joinMulticastGroup(const QHostAddress &amp; groupAddress)</p>
+<h2 id="8-3-TCP-x2F-IP-和-UDP的区别"><a href="#8-3-TCP-x2F-IP-和-UDP的区别" class="headerlink" title="8.3 TCP&#x2F;IP 和 UDP的区别"></a>8.3 TCP&#x2F;IP 和 UDP的区别</h2><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>TCP&#x2F;IP</strong></th>
+<th><strong>UDP</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>是否连接</td>
+<td>面向连接</td>
+<td>无连接</td>
+</tr>
+<tr>
+<td>传输方式</td>
+<td>基于流</td>
+<td>基于数据报</td>
+</tr>
+<tr>
+<td>传输可靠性</td>
+<td>可靠</td>
+<td>不可靠</td>
+</tr>
+<tr>
+<td>传输效率</td>
+<td>效率低</td>
+<td>效率高</td>
+</tr>
+<tr>
+<td>能否广播</td>
+<td>不能</td>
+<td>能</td>
+</tr>
+</tbody></table>
 <p><strong>免责声明：</strong>本文根据<a target="_blank" rel="noopener external nofollow noreferrer" href="https://yun.itheima.com/">传智播客</a>知识整理，仅为个人收藏，知识分享，请勿商用！</p>
 
       </div>
@@ -334,6 +400,14 @@
       
     </div>
     
+  <ul class="breadcrumb">
+          
+            <li><a href="/2022/">2022</a></li>
+            <li><a href="/2022/06/">06</a></li>
+            <li><a href="/2022/06/21/">21</a></li>
+            <li><a href="/2022/06/21/8%E3%80%81Socket%E9%80%9A%E4%BF%A1/">8、SOCKET通信</a></li>
+            <li><a href="/2022/06/21/8%E3%80%81Socket%E9%80%9A%E4%BF%A1//"></a></li>
+  </ul>
 
     
     
@@ -389,7 +463,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-QPainter"><span class="nav-number">1.</span> <span class="nav-text">6.1 QPainter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E7%BB%98%E5%9B%BE%E8%AE%BE%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">6.2 绘图设备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-1-QPixmap%E3%80%81QBitmap%E3%80%81QImage"><span class="nav-number">2.1.</span> <span class="nav-text">6.2.1 QPixmap、QBitmap、QImage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-2-QPicture"><span class="nav-number">2.2.</span> <span class="nav-text">6.2.2 QPicture</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1-TCP-x2F-IP"><span class="nav-number">1.</span> <span class="nav-text">8.1 TCP&#x2F;IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF"><span class="nav-number">1.1.</span> <span class="nav-text">服务器端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">1.2.</span> <span class="nav-text">客户端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2-UDP"><span class="nav-number">2.</span> <span class="nav-text">8.2 UDP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%BF%E6%92%AD"><span class="nav-number">2.1.</span> <span class="nav-text">广播</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E6%92%AD"><span class="nav-number">2.2.</span> <span class="nav-text">组播</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-3-TCP-x2F-IP-%E5%92%8C-UDP%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">8.3 TCP&#x2F;IP 和 UDP的区别</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -710,23 +784,23 @@ if(canvas.getContext){
             
             
               <li>
-                <a href="/archives/10002.html" title="Makefile构建stm32重定向串口printf" target="_blank">Makefile构建stm32重定向串口printf</a>
+                <a href="/2022/10/13/uart/" title="Makefile构建stm32重定向串口printf" target="_blank">Makefile构建stm32重定向串口printf</a>
               </li>
             
               <li>
-                <a href="/archives/ebd52ec9.html" title="关于Markdown的语法" target="_blank">关于Markdown的语法</a>
+                <a href="/2022/10/13/the%20frist%20day/" title="关于Markdown的语法" target="_blank">关于Markdown的语法</a>
               </li>
             
               <li>
-                <a href="/archives/342954a3.html" title="如何使用openocd烧录程序" target="_blank">如何使用openocd烧录程序</a>
+                <a href="/2022/10/13/opencd/" title="如何使用openocd烧录程序" target="_blank">如何使用openocd烧录程序</a>
               </li>
             
               <li>
-                <a href="/archives/6291345.html" title="11、Qt程序打包" target="_blank">11、Qt程序打包</a>
+                <a href="/2022/06/29/11%E3%80%81Qt%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/" title="11、Qt程序打包" target="_blank">11、Qt程序打包</a>
               </li>
             
               <li>
-                <a href="/archives/6251621.html" title="10、数库操作" target="_blank">10、数库操作</a>
+                <a href="/2022/06/25/10%E3%80%81%E6%95%B0%E5%BA%93%E6%93%8D%E4%BD%9C/" title="10、数库操作" target="_blank">10、数库操作</a>
               </li>
             
           </ul>

@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>微信小程序</title>
-    <url>/archives/10001.html</url>
+    <url>/2018/11/23/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
   <script id="hbeData" type="hbeData" data-hmacdigest="77cff9fee7b5149be6731feebe4c886747f64c34eee36a5e439bae238e40fb58">e6b9f4be5e64eaf3b5772d5fff20be0557923f166c53567fbdce9146f0881e05f5a50c0b0d993ce218396c8e2661d940a8d8d9e24116418087ee0b2e469047abd296299e3d00729891561ae833dcd31202de8fec26631cf649d95609d16bad6918347a4a1b60c639df34117a6bac77712ac8b447580e9b940c38f1346db6cfea762860eea3756b0fe65b52ce043ec4e235d7a7d20e396cafa7b540fe64996b34ce96cddc9d2ec1d8dfded8a3f53c4d319fbd52cd7e61ae49b4920727bfb892cc424c794a18ecad083dc60b1e3c0393764fd7b1d087b99a2f52f6efc0b9c040015eb6812ab6c6d1c91f127a5e7e8797b762a1ce0cd0c99477e83bb97b9e417d0b336df0458b7affdb8102a4c5a4064284a4583e7bb3b053b86cdc54fbea50a90cccb662b5e227a6f2dd577da6490a3135d1d871bd012088e976d3a4963c362416daedf3a1f597736f275a88a047cf712b7417b306d0ad77ff42bdf980788a737cc9b0f2cc5052414b6849b15fc632981686c177e5e8b8f596ce076b241568a90732876ade0f521756d3fca2bc4a7c8edb8a477a9177e796c50f7a2a0fb713d9f1cb296bfce43a40c5c2f8b7008881463a0bf56accd29e3d4e96f4319e0e1ec9c802620a9a0cb777fbb312e7819f00b40a0e070004e3f5fe2ae8598a2e6e7c597a0d7f881cec26c07b5b88469b9de0aa0f54f70b664c39a8873b23115fb572e83454828a67db02bce8789c71234ab9e3973ec107b89f98b70cc3ca4dad32d807bfa70eae265a289849325cb5a24a19d4fa9de87f11662cc5aeb7dba948a3d1d2c47bbae5564216aeaf5c16824b5541fb8a73a8a9382de50c7a3f3f7e1dbb1f3ff934bc4e6587d644da3c79d60e560d21ef8d8506a9f34305736ac5c8ff7f4459598afb5680b6f3b8945ba57ecdc8c5b4a19efa7bccf6cb0fb2aa93cdb7cc2381727c7c69426f21cd4b3114f33dca861eb3b218fe32b363981d89e70946c1209246dc755e48080df1c8a671c10050caf76fb47e60608704786fb55ebd5ee229e86b08a2246f16360cb612ad19f4f4567c1edae5288655d7d4c9d659e629067b40e06e78ee1740a49f9267de791e10946eb26460c8e62172d9384dd4a0cf6d918443af2cb6f248331868a6505c7c5517a6f60a1e744518e416b07a30aefaa18a51f0fa4602c90a410b487a3df80bdbe9be75524e1a8b38080beb9043069dee6b0ccb5c08ea56e8dfe9cb73aee74bab473527a37aa749e2070db5e6b054a88eb9c5e1ec96a639085fc49754b2b9cdb54fc9ddb51e4103748bf06d8bbd0addc9ff64e5f0c25fe4e9c51a1a155fe9226b9f4464e5ad6bd7acb01f8ea27e2b86c5c00952a8ef1c641ddd05e01ca779030f456f28a036c46f78266707bc11e1c20df308f73ac226e9b7fcfbcaa2fd19227b4c4cdee9b1ae47a9487ee1696801c6ae536ad723a0eb496c92f290a26af60104f9c430500a88f6927ec03e99924b10713fea846d263b9a7dabaa0acbddc8cd3b9d7bcb6ce9a50b7dbe68d460ab9dd2e35a393e5490bb433a238a290de7d776d65044b50317c9ee36331a8a55984e59a2195a34</script>
   <div class="hbe hbe-content">
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <title>Makefile构建stm32重定向串口printf</title>
-    <url>/archives/10002.html</url>
+    <url>/2022/10/13/uart/</url>
     <content><![CDATA[<span id="more"></span>
 
 <h2 id="一、串口重定向"><a href="#一、串口重定向" class="headerlink" title="一、串口重定向"></a>一、串口重定向</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"></span><br><span class="line">int _write(int fd, char *ch, int len)//可在main.c或者uart.c</span><br><span class="line">&#123;</span><br><span class="line">  HAL_UART_Transmit(&amp;huart1, (uint8_t*)ch, len, 0xFFFF);</span><br><span class="line">  <span class="built_in">return</span> len;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -37,7 +37,7 @@
   </entry>
   <entry>
     <title>关于Markdown的语法</title>
-    <url>/archives/ebd52ec9.html</url>
+    <url>/2022/10/13/the%20frist%20day/</url>
     <content><![CDATA[<p>以下是Markdwm的一些常用到的基本语法</p>
 <span id="more"></span>
 
@@ -117,7 +117,7 @@
   </entry>
   <entry>
     <title>如何使用openocd烧录程序</title>
-    <url>/archives/342954a3.html</url>
+    <url>/2022/10/13/opencd/</url>
     <content><![CDATA[<h2 id="一、openocd介绍"><a href="#一、openocd介绍" class="headerlink" title="一、openocd介绍"></a>一、openocd介绍</h2><p>OpenOCD（Open On-Chip Debugger）是一个开源的片上调试器，旨在提供针对嵌入式设备的调试、系统编程和边界扫描功能。OpenOCD的功能需要调试仿真器来辅助完成，调试仿真器是一个提供调试目标电信号的小型硬件单元。常用的有JLink、STLink等，一些开发板直接集成了调试仿真器，如小熊派开发板就集成了STLink。</p>
 <span id="more"></span>
 
@@ -134,7 +134,7 @@
   </entry>
   <entry>
     <title>11、Qt程序打包</title>
-    <url>/archives/6291345.html</url>
+    <url>/2022/06/29/11%E3%80%81Qt%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/</url>
     <content><![CDATA[<p>Qt的应用程序编译出来之后,将单独的exe程序拿到其他PC上运行是运行不起来的,会提示缺少对应的动态链接库。我们需要去Qt的安装目录下找到所有的Qt程序运行时所依赖的，将他们和exe程序放到同一目录下，程序才可以执行。</p>
 <p>根据上边的描述我们可以想象的到，如果手动去寻找应用程序依赖的动态库，这是一件非常麻烦的事情。其实我们完全没有必要这么辛苦，Qt给我们提供了一个寻找依赖项的工具windeployqt</p>
 <p>Windeployqt的使用方法：<br> <span id="more"></span></p>
@@ -169,7 +169,7 @@
   </entry>
   <entry>
     <title>10、数库操作</title>
-    <url>/archives/6251621.html</url>
+    <url>/2022/06/25/10%E3%80%81%E6%95%B0%E5%BA%93%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h2 id="10-1-数据库操作"><a href="#10-1-数据库操作" class="headerlink" title="10.1 数据库操作"></a>10.1 数据库操作</h2><p><strong>Qt</strong> <strong>提供了 QtSQL 模块来提供平台独立的基于 SQL 的数据库操作。</strong>这里我们所说的“平台独立”，既包括操作系统平台，有包括各个数据库平台。另外，我们强调了“基于 SQL”，因为 NoSQL 数据库至今没有一个通用查询方法，所以不可能提供一种通用的 NoSQL 数据库的操作。<strong>Qt 的数据库操作还可以很方便的与 model&#x2F;view 架构进行整合。</strong>通常来说，我们对数据库的操作更多地在于对数据库表的操作，而这正是 model&#x2F;view 架构的长项。</p>
  <span id="more"></span>
 <p><strong>Qt</strong> <strong>使用QSqlDatabase表示一个数据库连接。</strong>更底层上，Qt 使用驱动（drivers）来与不同的数据库 API 进行交互。Qt 桌面版本提供了如下几种驱动：</p>
@@ -319,7 +319,7 @@
   </entry>
   <entry>
     <title>9、多线程</title>
-    <url>/archives/6231331.html</url>
+    <url>/2022/06/23/9%E3%80%81%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
     <content><![CDATA[<p>通常情况下，应用程序都是在一个线程中执行操作。但是，当调用一个耗时操作（例如，大批量I&#x2F;O或大量矩阵变换等CPU密集操作）时，用户界面常常会冻结。而使用多线程可以解决这一问题。</p>
 <p>多线程有以下几个优势：<br> <span id="more"></span></p>
 <ul>
@@ -436,7 +436,7 @@
   </entry>
   <entry>
     <title>8、Socket通信</title>
-    <url>/archives/6211508.html</url>
+    <url>/2022/06/21/8%E3%80%81Socket%E9%80%9A%E4%BF%A1/</url>
     <content><![CDATA[<p>Qt中提供的所有的Socket类都是非阻塞的。</p>
 <p>Qt中常用的用于socket通信的套接字类:<br> <span id="more"></span></p>
 <ul>
@@ -464,7 +464,7 @@
 <ul>
 <li><p>接收或者向客户端发送数据</p>
 </li>
-<li><p>接收数据：使用read（）或者readAll（）函数</p>
+<li><p>接收数据：使用read()或者readAll()函数</p>
 </li>
 <li><p>发送数据：使用write（）函数</p>
 </li>
@@ -591,7 +591,7 @@
   </entry>
   <entry>
     <title>7、文件系统</title>
-    <url>/archives/6181735.html</url>
+    <url>/2022/06/18/7%E3%80%81%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<p>文件操作是应用程序必不可少的部分。Qt 作为一个通用开发库，提供了跨平台的文件操作能力。Qt 通过QIODevice提供了对 I&#x2F;O 设备的抽象，这些设备具有读写字节块的能力。下面是 I&#x2F;O 设备的类图（Qt5）：</p>
  <span id="more"></span>
 <p><img src="/photos/image030.png" alt="Qt"></p>
@@ -751,7 +751,7 @@
   </entry>
   <entry>
     <title>6、绘图和绘图设备</title>
-    <url>/archives/6171531.html</url>
+    <url>/2022/06/17/6%E3%80%81%E7%BB%98%E5%9B%BE%E5%92%8C%E7%BB%98%E5%9B%BE%E8%AE%BE%E5%A4%87/</url>
     <content><![CDATA[<h2 id="6-1-QPainter"><a href="#6-1-QPainter" class="headerlink" title="6.1 QPainter"></a>6.1 QPainter</h2><p>Qt 的绘图系统允许使用相同的 API 在屏幕和其它打印设备上进行绘制。整个绘图系统基于QPainter，QPainterDevice和QPaintEngine三个类。</p>
 <p><strong>QPainter</strong>用来执行绘制的操作；<strong>QPaintDevice</strong>是一个二维空间的抽象，这个二维空间允许QPainter在其上面进行绘制，也就是QPainter工作的空间；<strong>QPaintEngine</strong>提供了画笔（QPainter）在不同的设备上进行绘制的统一的接口。QPaintEngine类应用于QPainter和QPaintDevice之间，通常对开发人员是透明的。除非你需要自定义一个设备，否则你是不需要关心QPaintEngine这个类的。我们可以把QPainter理解成画笔；把QPaintDevice理解成使用画笔的地方，比如纸张、屏幕等；而对于纸张、屏幕而言，肯定要使用不同的画笔绘制，为了统一使用一种画笔，我们设计了QPaintEngine类，这个类让不同的纸张、屏幕都能使用一种画笔。</p>
  <span id="more"></span>
@@ -844,7 +844,7 @@
   </entry>
   <entry>
     <title>5、Qt消息机制和事件</title>
-    <url>/archives/61270931.html</url>
+    <url>/2022/06/12/5%E3%80%81Qt%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6%E5%92%8C%E4%BA%8B%E4%BB%B6/</url>
     <content><![CDATA[<h2 id="5-1-事件"><a href="#5-1-事件" class="headerlink" title="5.1 事件"></a>5.1 事件</h2><p>事件（event）是由系统或者 Qt 本身在不同的时刻发出的。当用户按下鼠标、敲下键盘，或者是窗口需要重新绘制的时候，都会发出一个相应的事件。一些事件在对用户操作做出响应时发出，如键盘事件等；另一些事件则是由系统自动发出，如计时器事件。</p>
 <p>在前面我们也曾经简单提到，<strong>Qt 程序</strong>需要在main()函数创建一个QApplication对象，然后调用它的exec()函数。这个函数就是开始 Qt 的事件循环。在执行exec()函数之后，程序将进入事件循环来监听应用程序的事件。当事件发生时，Qt 将创建一个事件对象。<strong>Qt 中所有事件类都继承于QEvent</strong>。在事件对象创建完毕后，Qt 将这个事件对象传递给QObject的event()函数。<strong>event()函数并不直接处理事件，而是按照事件对象的类型分派给特定的事件处理函数</strong>（event handler），关于这一点，会在后边详细说明。</p>
 <p>在所有组件的父类QWidget中，定义了很多事件处理的回调函数，如<br> <span id="more"></span></p>
@@ -1045,7 +1045,7 @@
   </entry>
   <entry>
     <title>4、Qt窗口系统</title>
-    <url>/archives/61071251.html</url>
+    <url>/2022/06/10/4%E3%80%81Qt%E7%AA%97%E5%8F%A3%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h2 id="4-1-Qt窗口坐标体系"><a href="#4-1-Qt窗口坐标体系" class="headerlink" title="4.1 Qt窗口坐标体系"></a>4.1 Qt窗口坐标体系</h2><h3 id="坐标体系"><a href="#坐标体系" class="headerlink" title="坐标体系"></a>坐标体系</h3><p>以左上角为原点，X向右增加，Y向下增加。</p>
 <p>​                            <img src="/photos/image011.png" alt="QT">   </p>
 <p>对于嵌套窗口，其坐标是<strong>相对于父窗口</strong>来说的。</p>
@@ -1527,7 +1527,7 @@
   </entry>
   <entry>
     <title>3、信号和槽机制</title>
-    <url>/archives/60870931.html</url>
+    <url>/2022/06/08/3%E3%80%81%E4%BF%A1%E5%8F%B7%E5%92%8C%E6%A7%BD%E6%9C%BA%E5%88%B6/</url>
     <content><![CDATA[<p>信号槽是 Qt 框架引以为豪的机制之一。所谓信号槽，实际就是观察者模式。<strong>当某个事件发生之后</strong>，比如，按钮检测到自己被点击了一下，<strong>它就会发出一个信号（signal）</strong>。这种发出是没有目的的，类似广播。<strong>如果有对象对这个信号感兴趣，它就会使用连接（connect）函数</strong>，意思是，<strong>将想要处理的信号和自己的一个函数（称为槽（slot））绑定来处理这个信号</strong>。也就是说，<strong>当信号发出时，被连接的槽函数会自动被回调</strong>。这就类似观察者模式：当发生了感兴趣的事件，某一个操作就会被自动触发。（这里提一句，Qt 的信号槽使用了额外的处理来实现，并不是 GoF 经典的观察者模式的实现方式。）</p>
  <span id="more"></span>
 <h2 id="3-1-信号和槽"><a href="#3-1-信号和槽" class="headerlink" title="3.1 信号和槽"></a>3.1 信号和槽</h2><p>为了体验一下信号槽的使用，我们以一段简单的代码说明：</p>
@@ -1675,7 +1675,7 @@
   </entry>
   <entry>
     <title>2、创建Qt项目</title>
-    <url>/archives/6051431.html</url>
+    <url>/2022/06/05/2%E3%80%81%E5%88%9B%E5%BB%BAQt%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<h2 id="2-1-使用向导创建"><a href="#2-1-使用向导创建" class="headerlink" title="2.1 使用向导创建"></a>2.1 使用向导创建</h2> <span id="more"></span>
 <p>打开Qt Creator 界面选择 New Project或者选择菜单栏 【文件】-【新建文件或项目】菜单项</p>
 <p>​                 <img src="/photos/image001.png"  />              </p>
@@ -1779,7 +1779,7 @@
   </entry>
   <entry>
     <title>1、Qt概述</title>
-    <url>/archives/6041302.html</url>
+    <url>/2022/06/04/1%E3%80%81Qt%E6%A6%82%E8%BF%B0/</url>
     <content><![CDATA[<h2 id="1-1-什么是Qt"><a href="#1-1-什么是Qt" class="headerlink" title="1.1 什么是Qt"></a>1.1 什么是Qt</h2><p>Qt是一个<strong>跨平台</strong>的C++<strong>图形用户界面应用程序框架</strong>。它为应用程序开发者提供建立艺术级图形界面所需的所有功能。它是完全面向对象的，很容易扩展，并且允许真正的组件编程。</p>
 <span id="more"></span>
 

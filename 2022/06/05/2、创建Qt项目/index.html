@@ -23,20 +23,31 @@
     var CONFIG = {"hostname":"picdream.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true,"Pisces | Gemini":240},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="文章已被加密，可输入密码查看">
+  <meta name="description" content="2.1 使用向导创建">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信小程序">
-<meta property="og:url" content="http://picdream.cn/archives/10001.html">
+<meta property="og:title" content="2、创建Qt项目">
+<meta property="og:url" content="https://picdream.cn/2022/06/05/2%E3%80%81%E5%88%9B%E5%BB%BAQt%E9%A1%B9%E7%9B%AE/index.html">
 <meta property="og:site_name" content="拾梦">
-<meta property="og:description" content="文章已被加密，可输入密码查看">
+<meta property="og:description" content="2.1 使用向导创建">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-11-23T13:20:03.000Z">
-<meta property="article:modified_time" content="2022-07-04T12:25:12.000Z">
+<meta property="og:image" content="https://picdream.cn/photos/image001.png">
+<meta property="og:image" content="https://picdream.cn/photos/image002.png">
+<meta property="og:image" content="https://picdream.cn/photos/image003.png">
+<meta property="og:image" content="https://picdream.cn/photos/image004.png">
+<meta property="og:image" content="https://picdream.cn/photos/image005.png">
+<meta property="og:image" content="https://picdream.cn/photos/image006.png">
+<meta property="og:image" content="https://picdream.cn/photos/image007.png">
+<meta property="og:image" content="https://picdream.cn/photos/image008.png">
+<meta property="og:image" content="https://picdream.cn/photos/image009.png">
+<meta property="article:published_time" content="2022-06-05T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-09T09:58:42.000Z">
 <meta property="article:author" content="Mr.Wei">
-<meta property="article:tag" content="java">
+<meta property="article:tag" content="Qt">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picdream.cn/photos/image001.png">
 
-<link rel="canonical" href="http://picdream.cn/archives/10001.html">
+<link rel="canonical" href="https://picdream.cn/2022/06/05/2%E3%80%81%E5%88%9B%E5%BB%BAQt%E9%A1%B9%E7%9B%AE/">
 
 
 <script id="page-configurations">
@@ -49,7 +60,7 @@
   };
 </script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
-  <title>微信小程序 | 拾梦
+  <title>2、创建Qt项目 | 拾梦
 </title>
   
 
@@ -161,7 +172,7 @@
   </li>
         <li class="menu-item menu-item-resume">
 
-    <a href="https://picdream.cn/resume.github.io/" rel="section"><i class="fa fa-fw fa-user-secret"></i>个人简历</a>
+    <a href="https://picdream.github.io/resume.github.io/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-user-secret"></i>个人简历</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -224,11 +235,19 @@
     <div class="post-block" lang="zh-CN">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">微信小程序
+<h1 class="post-title" itemprop="name headline">2、创建Qt项目
 </h1>
 
 <div class="post-meta">
   
+  <ul class="breadcrumb">
+          
+            <li><a href="/2022/">2022</a></li>
+            <li><a href="/2022/06/">06</a></li>
+            <li><a href="/2022/06/05/">05</a></li>
+            <li><a href="/2022/06/05/2%E3%80%81%E5%88%9B%E5%BB%BAQt%E9%A1%B9%E7%9B%AE/">2、创建QT项目</a></li>
+            <li><a href="/2022/06/05/2%E3%80%81%E5%88%9B%E5%BB%BAQt%E9%A1%B9%E7%9B%AE//"></a></li>
+  </ul>
 
 </div>
 
@@ -238,24 +257,116 @@
       
       
       <div class="post-body">
-          <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="77cff9fee7b5149be6731feebe4c886747f64c34eee36a5e439bae238e40fb58">e6b9f4be5e64eaf3b5772d5fff20be0557923f166c53567fbdce9146f0881e05f5a50c0b0d993ce218396c8e2661d940a8d8d9e24116418087ee0b2e469047abd296299e3d00729891561ae833dcd31202de8fec26631cf649d95609d16bad6918347a4a1b60c639df34117a6bac77712ac8b447580e9b940c38f1346db6cfea762860eea3756b0fe65b52ce043ec4e235d7a7d20e396cafa7b540fe64996b34ce96cddc9d2ec1d8dfded8a3f53c4d319fbd52cd7e61ae49b4920727bfb892cc424c794a18ecad083dc60b1e3c0393764fd7b1d087b99a2f52f6efc0b9c040015eb6812ab6c6d1c91f127a5e7e8797b762a1ce0cd0c99477e83bb97b9e417d0b336df0458b7affdb8102a4c5a4064284a4583e7bb3b053b86cdc54fbea50a90cccb662b5e227a6f2dd577da6490a3135d1d871bd012088e976d3a4963c362416daedf3a1f597736f275a88a047cf712b7417b306d0ad77ff42bdf980788a737cc9b0f2cc5052414b6849b15fc632981686c177e5e8b8f596ce076b241568a90732876ade0f521756d3fca2bc4a7c8edb8a477a9177e796c50f7a2a0fb713d9f1cb296bfce43a40c5c2f8b7008881463a0bf56accd29e3d4e96f4319e0e1ec9c802620a9a0cb777fbb312e7819f00b40a0e070004e3f5fe2ae8598a2e6e7c597a0d7f881cec26c07b5b88469b9de0aa0f54f70b664c39a8873b23115fb572e83454828a67db02bce8789c71234ab9e3973ec107b89f98b70cc3ca4dad32d807bfa70eae265a289849325cb5a24a19d4fa9de87f11662cc5aeb7dba948a3d1d2c47bbae5564216aeaf5c16824b5541fb8a73a8a9382de50c7a3f3f7e1dbb1f3ff934bc4e6587d644da3c79d60e560d21ef8d8506a9f34305736ac5c8ff7f4459598afb5680b6f3b8945ba57ecdc8c5b4a19efa7bccf6cb0fb2aa93cdb7cc2381727c7c69426f21cd4b3114f33dca861eb3b218fe32b363981d89e70946c1209246dc755e48080df1c8a671c10050caf76fb47e60608704786fb55ebd5ee229e86b08a2246f16360cb612ad19f4f4567c1edae5288655d7d4c9d659e629067b40e06e78ee1740a49f9267de791e10946eb26460c8e62172d9384dd4a0cf6d918443af2cb6f248331868a6505c7c5517a6f60a1e744518e416b07a30aefaa18a51f0fa4602c90a410b487a3df80bdbe9be75524e1a8b38080beb9043069dee6b0ccb5c08ea56e8dfe9cb73aee74bab473527a37aa749e2070db5e6b054a88eb9c5e1ec96a639085fc49754b2b9cdb54fc9ddb51e4103748bf06d8bbd0addc9ff64e5f0c25fe4e9c51a1a155fe9226b9f4464e5ad6bd7acb01f8ea27e2b86c5c00952a8ef1c641ddd05e01ca779030f456f28a036c46f78266707bc11e1c20df308f73ac226e9b7fcfbcaa2fd19227b4c4cdee9b1ae47a9487ee1696801c6ae536ad723a0eb496c92f290a26af60104f9c430500a88f6927ec03e99924b10713fea846d263b9a7dabaa0acbddc8cd3b9d7bcb6ce9a50b7dbe68d460ab9dd2e35a393e5490bb433a238a290de7d776d65044b50317c9ee36331a8a55984e59a2195a34</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-blink">
-      <input class="hbe hbe-input-field hbe-input-field-blink" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-blink" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-blink" data-content="请输入密码">请输入密码</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+          <h2 id="2-1-使用向导创建"><a href="#2-1-使用向导创建" class="headerlink" title="2.1 使用向导创建"></a>2.1 使用向导创建</h2> <span id="more"></span>
+<p>打开Qt Creator 界面选择 New Project或者选择菜单栏 【文件】-【新建文件或项目】菜单项</p>
+<p>​                 <img src="/photos/image001.png"  />              </p>
+<p>弹出New Project对话框，选择Qt Widgets Application， </p>
+<p> <img src="/photos/image002.png" alt="Qt"></p>
+<p>选择【Choose】按钮，弹出如下对话框</p>
+<p> <img src="/photos/image003.png" alt="Qt"></p>
+<p>设置项目名称和路径，按照向导进行下一步，</p>
+<p> <img src="/photos/image004.png" alt="Qt"></p>
+<p>选择编译套件</p>
+<p> <img src="/photos/image005.png" alt="Qt"></p>
+<p>向导会默认添加一个继承自CMainWindow的类，可以在此修改类的名字和基类。继续下一步</p>
+<p> <img src="/photos/image006.png" alt="Qt"></p>
+<p>即可创建出一个Qt桌面程序。</p>
+<h2 id="2-2-手动创建"><a href="#2-2-手动创建" class="headerlink" title="2.2   手动创建"></a>2.2   手动创建</h2><p>添加一个空项目</p>
+<p> <img src="/photos/image007.png" alt="Qt"></p>
+<p>选择【choose】进行下一步。设置项目名称和路径 —&gt; 选择编译套件 –&gt; 修改类信息 –&gt; 完成（步骤同上），生成一个空项目。在空项目中添加文件：在项目名称上单击鼠标右键弹出右键菜单，选择【添加新文件】</p>
+<p> <img src="/photos/image008.png" alt="Qt"></p>
+<p>弹出新建文件对话框</p>
+<p> <img src="/photos/image009.png" alt="Qt"></p>
+<p>在此对话框中选择要添加的类或者文件，根据向导完成文件的添加。</p>
+<h2 id="2-3-pro文件"><a href="#2-3-pro文件" class="headerlink" title="2.3   .pro文件"></a>2.3   .pro文件</h2><p>在使用Qt向导生成的应用程序.pro文件格式如下：</p>
+<pre><code><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">QT    += core gui  <span class="comment">//模块的名字</span></span><br><span class="line"></span><br><span class="line">​    <span class="built_in">greaterThan</span>(QT_MAJOR_VERSION, <span class="number">4</span>): QT += widgets</span><br><span class="line"></span><br><span class="line">​    TARGET = test <span class="comment">//应用程序</span></span><br><span class="line"></span><br><span class="line">​    TEMPLATE = app <span class="comment">//生成的makefile的模板类型</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//源文件</span></span><br><span class="line"></span><br><span class="line"> SOURCES += main.cpp/</span><br><span class="line"></span><br><span class="line"> mainwindow.cpp</span><br><span class="line"></span><br><span class="line"><span class="comment">//头文件</span></span><br><span class="line"></span><br><span class="line"> HEADERS += mainwindow.h</span><br><span class="line"></span><br><span class="line"> <span class="comment">//窗口设计文件</span></span><br><span class="line"></span><br><span class="line">FORMS  += mainwindow.ui</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p><strong>.pro</strong>就是工程文件(project)，它是qmake自动生成的用于生产makefile的配置文件**。.pro文件的写法如下：</p>
+<ul>
+<li>注释</li>
+</ul>
+<p>从“#”开始，到这一行结束。</p>
+<ul>
+<li><p>模板变量告诉qmake为这个应用程序生成哪种makefile。下面是可供使用的选择：<strong>TEMPLATE</strong> &#x3D; app</p>
+</li>
+<li><p>app -建立一个应用程序的makefile。这是默认值，所以如果模板没有被指定，这个将被使用。</p>
+</li>
+<li><p>lib - 建立一个库的makefile。</p>
+</li>
+<li><p>vcapp - 建立一个应用程序的VisualStudio项目文件。</p>
+</li>
+<li><p>vclib - 建立一个库的VisualStudio项目文件。</p>
+</li>
+<li><p>subdirs -这是一个特殊的模板，它可以创建一个能够进入特定目录并且为一个项目文件生成makefile并且为它调用make的makefile。</p>
+</li>
+<li><p>#指定生成的应用程序名：</p>
+</li>
+</ul>
+<p><strong>TARGET</strong> &#x3D; QtDemo</p>
+<ul>
+<li>#工程中包含的头文件</li>
+</ul>
+<p><strong>HEADERS</strong> +&#x3D; include&#x2F;painter.h</p>
+<ul>
+<li>#工程中包含的.ui设计文件</li>
+</ul>
+<p><strong>FORMS</strong> +&#x3D; forms&#x2F;painter.ui</p>
+<ul>
+<li>#工程中包含的源文件</li>
+</ul>
+<p><strong>SOURCES</strong> +&#x3D; sources&#x2F;main.cpp sources&#x2F;painter.cpp</p>
+<ul>
+<li>#工程中包含的资源文件</li>
+</ul>
+<p><strong>RESOURCES</strong> +&#x3D; qrc&#x2F;painter.qrc</p>
+<ul>
+<li><strong>greaterThan(QT_MAJOR_VERSION, 4): QT +&#x3D; widgets</strong></li>
+</ul>
+<p><strong>这条语句的含义是，如果QT_MAJOR_VERSION大于4（也就是当前使用的Qt5及更高版本）需要增加widgets模块。如果项目仅需支持Qt5，也可以直接添加“QT +&#x3D; widgets”一句。不过为了保持代码兼容，最好还是按照QtCreator生成的语句编写。</strong></p>
+<ul>
+<li>#配置信息</li>
+</ul>
+<p>CONFIG用来告诉qmake关于应用程序的配置信息。</p>
+<p>CONFIG +&#x3D; c++11  &#x2F;&#x2F;使用c++11的特性</p>
+<p>在这里使用“+&#x3D;”，是因为我们添加我们的配置选项到任何一个已经存在中。这样做比使用“&#x3D;”那样替换已经指定的所有选项更安全。</p>
+<h2 id="2-4-一个最简单的Qt应用程序"><a href="#2-4-一个最简单的Qt应用程序" class="headerlink" title="2.4   一个最简单的Qt应用程序"></a>2.4   一个最简单的Qt应用程序</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> #include &lt;QApplication&gt;</span><br><span class="line"> #include &lt;QWidget&gt;</span><br><span class="line">int main(int argc, char *argv[])</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">     QApplication a(argc, argv);</span><br><span class="line">     QWidget w;</span><br><span class="line">     w.show();</span><br><span class="line">     return a.exec();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>解释：</p>
+<ul>
+<li><p>Qt头文件没有.h后缀</p>
+</li>
+<li><p>Qt一个类对应一个头文件，类名就是头文件名</p>
+</li>
+<li><p>QApplication应用程序类</p>
+</li>
+<li><p>管理图形用户界面应用程序的控制流和主要设置。</p>
+</li>
+<li><p>是Qt的整个后台管理的命脉它<strong>包含主事件循环</strong>，在其中来自窗口系统和其它资源的<strong>所有事件处理和调度</strong>。它也处理<strong>应用程序的初始化和结束</strong>，并且<strong>提供对话管理</strong>。</p>
+</li>
+<li><p>对于任何一个使用Qt的图形用户界面应用程序，都正好存在一个QApplication 对象，而不论这个应用程序在同一时间内是不是有0、1、2或更多个窗口。</p>
+</li>
+<li><p>a.exec()</p>
+</li>
+</ul>
+<p>程序进入消息循环，等待对用户输入进行响应。这里main()把控制权转交给Qt，Qt完成事件处理工作，当应用程序退出的时候exec()的值就会返回。<strong>在exec()中，Qt接受并处理用户和系统的事件并且把它们传递给适当的窗口部件。</strong></p>
+<p><strong>免责声明：</strong>本文根据<a target="_blank" rel="noopener external nofollow noreferrer" href="https://yun.itheima.com/">传智播客</a>知识整理，仅为个人收藏，知识分享，请勿商用！</p>
+
       </div>
       
       
       
     </div>
     
+  <ul class="breadcrumb">
+          
+            <li><a href="/2022/">2022</a></li>
+            <li><a href="/2022/06/">06</a></li>
+            <li><a href="/2022/06/05/">05</a></li>
+            <li><a href="/2022/06/05/2%E3%80%81%E5%88%9B%E5%BB%BAQt%E9%A1%B9%E7%9B%AE/">2、创建QT项目</a></li>
+            <li><a href="/2022/06/05/2%E3%80%81%E5%88%9B%E5%BB%BAQt%E9%A1%B9%E7%9B%AE//"></a></li>
+  </ul>
 
     
     
@@ -311,6 +422,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E4%BD%BF%E7%94%A8%E5%90%91%E5%AF%BC%E5%88%9B%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">2.1 使用向导创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E6%89%8B%E5%8A%A8%E5%88%9B%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">2.2   手动创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-pro%E6%96%87%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">2.3   .pro文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-%E4%B8%80%E4%B8%AA%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84Qt%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="nav-number">4.</span> <span class="nav-text">2.4   一个最简单的Qt应用程序</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -631,23 +743,23 @@ if(canvas.getContext){
             
             
               <li>
-                <a href="/archives/10002.html" title="Makefile构建stm32重定向串口printf" target="_blank">Makefile构建stm32重定向串口printf</a>
+                <a href="/2022/10/13/uart/" title="Makefile构建stm32重定向串口printf" target="_blank">Makefile构建stm32重定向串口printf</a>
               </li>
             
               <li>
-                <a href="/archives/ebd52ec9.html" title="关于Markdown的语法" target="_blank">关于Markdown的语法</a>
+                <a href="/2022/10/13/the%20frist%20day/" title="关于Markdown的语法" target="_blank">关于Markdown的语法</a>
               </li>
             
               <li>
-                <a href="/archives/342954a3.html" title="如何使用openocd烧录程序" target="_blank">如何使用openocd烧录程序</a>
+                <a href="/2022/10/13/opencd/" title="如何使用openocd烧录程序" target="_blank">如何使用openocd烧录程序</a>
               </li>
             
               <li>
-                <a href="/archives/6291345.html" title="11、Qt程序打包" target="_blank">11、Qt程序打包</a>
+                <a href="/2022/06/29/11%E3%80%81Qt%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/" title="11、Qt程序打包" target="_blank">11、Qt程序打包</a>
               </li>
             
               <li>
-                <a href="/archives/6251621.html" title="10、数库操作" target="_blank">10、数库操作</a>
+                <a href="/2022/06/25/10%E3%80%81%E6%95%B0%E5%BA%93%E6%93%8D%E4%BD%9C/" title="10、数库操作" target="_blank">10、数库操作</a>
               </li>
             
           </ul>

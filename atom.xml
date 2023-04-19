@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>拾梦</title>
-  <icon>http://picdream.cn/icon.png</icon>
+  <icon>https://picdream.cn/icon.png</icon>
   
-  <link href="http://picdream.cn/atom.xml" rel="self"/>
+  <link href="https://picdream.cn/atom.xml" rel="self"/>
   
-  <link href="http://picdream.cn/"/>
+  <link href="https://picdream.cn/"/>
   <updated>2022-07-04T14:16:06.000Z</updated>
-  <id>http://picdream.cn/</id>
+  <id>https://picdream.cn/</id>
   
   <author>
     <name>Mr.Wei</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Makefile构建stm32重定向串口printf</title>
-    <link href="http://picdream.cn/archives/10002.html"/>
-    <id>http://picdream.cn/archives/10002.html</id>
+    <link href="https://picdream.cn/2022/10/13/uart/"/>
+    <id>https://picdream.cn/2022/10/13/uart/</id>
     <published>2022-10-13T11:49:56.350Z</published>
     <updated>2022-07-04T14:16:06.000Z</updated>
     
@@ -37,14 +37,14 @@
     
     
     
-    <category term="Makefile" scheme="http://picdream.cn/tags/Makefile/"/>
+    <category term="Makefile" scheme="https://picdream.cn/tags/Makefile/"/>
     
   </entry>
   
   <entry>
     <title>关于Markdown的语法</title>
-    <link href="http://picdream.cn/archives/ebd52ec9.html"/>
-    <id>http://picdream.cn/archives/ebd52ec9.html</id>
+    <link href="https://picdream.cn/2022/10/13/the%20frist%20day/"/>
+    <id>https://picdream.cn/2022/10/13/the%20frist%20day/</id>
     <published>2022-10-13T11:49:55.263Z</published>
     <updated>2022-07-08T10:40:14.000Z</updated>
     
@@ -58,8 +58,8 @@
   
   <entry>
     <title>如何使用openocd烧录程序</title>
-    <link href="http://picdream.cn/archives/342954a3.html"/>
-    <id>http://picdream.cn/archives/342954a3.html</id>
+    <link href="https://picdream.cn/2022/10/13/opencd/"/>
+    <id>https://picdream.cn/2022/10/13/opencd/</id>
     <published>2022-10-13T11:49:55.056Z</published>
     <updated>2022-07-04T12:36:36.000Z</updated>
     
@@ -73,8 +73,8 @@
   
   <entry>
     <title>11、Qt程序打包</title>
-    <link href="http://picdream.cn/archives/6291345.html"/>
-    <id>http://picdream.cn/archives/6291345.html</id>
+    <link href="https://picdream.cn/2022/06/29/11%E3%80%81Qt%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/"/>
+    <id>https://picdream.cn/2022/06/29/11%E3%80%81Qt%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/</id>
     <published>2022-06-29T00:00:00.000Z</published>
     <updated>2022-07-09T10:04:14.000Z</updated>
     
@@ -86,16 +86,16 @@
     
     
     
-    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    <category term="Qt" scheme="https://picdream.cn/tags/Qt/"/>
     
-    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    <category term="C++" scheme="https://picdream.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>10、数库操作</title>
-    <link href="http://picdream.cn/archives/6251621.html"/>
-    <id>http://picdream.cn/archives/6251621.html</id>
+    <link href="https://picdream.cn/2022/06/25/10%E3%80%81%E6%95%B0%E5%BA%93%E6%93%8D%E4%BD%9C/"/>
+    <id>https://picdream.cn/2022/06/25/10%E3%80%81%E6%95%B0%E5%BA%93%E6%93%8D%E4%BD%9C/</id>
     <published>2022-06-25T00:00:00.000Z</published>
     <updated>2022-07-09T06:07:42.000Z</updated>
     
@@ -105,16 +105,16 @@
     
     
     
-    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    <category term="Qt" scheme="https://picdream.cn/tags/Qt/"/>
     
-    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    <category term="C++" scheme="https://picdream.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>9、多线程</title>
-    <link href="http://picdream.cn/archives/6231331.html"/>
-    <id>http://picdream.cn/archives/6231331.html</id>
+    <link href="https://picdream.cn/2022/06/23/9%E3%80%81%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <id>https://picdream.cn/2022/06/23/9%E3%80%81%E5%A4%9A%E7%BA%BF%E7%A8%8B/</id>
     <published>2022-06-23T00:00:00.000Z</published>
     <updated>2022-07-09T09:59:04.000Z</updated>
     
@@ -125,18 +125,18 @@
     
     
     
-    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    <category term="Qt" scheme="https://picdream.cn/tags/Qt/"/>
     
-    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    <category term="C++" scheme="https://picdream.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>8、Socket通信</title>
-    <link href="http://picdream.cn/archives/6211508.html"/>
-    <id>http://picdream.cn/archives/6211508.html</id>
+    <link href="https://picdream.cn/2022/06/21/8%E3%80%81Socket%E9%80%9A%E4%BF%A1/"/>
+    <id>https://picdream.cn/2022/06/21/8%E3%80%81Socket%E9%80%9A%E4%BF%A1/</id>
     <published>2022-06-21T00:00:00.000Z</published>
-    <updated>2022-07-10T08:01:20.000Z</updated>
+    <updated>2023-04-07T10:15:35.715Z</updated>
     
     
     <summary type="html">&lt;p&gt;Qt中提供的所有的Socket类都是非阻塞的。&lt;/p&gt;
@@ -145,16 +145,16 @@
     
     
     
-    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    <category term="Qt" scheme="https://picdream.cn/tags/Qt/"/>
     
-    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    <category term="C++" scheme="https://picdream.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>7、文件系统</title>
-    <link href="http://picdream.cn/archives/6181735.html"/>
-    <id>http://picdream.cn/archives/6181735.html</id>
+    <link href="https://picdream.cn/2022/06/18/7%E3%80%81%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://picdream.cn/2022/06/18/7%E3%80%81%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</id>
     <published>2022-06-18T00:00:00.000Z</published>
     <updated>2022-07-09T09:58:28.000Z</updated>
     
@@ -164,16 +164,16 @@
     
     
     
-    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    <category term="Qt" scheme="https://picdream.cn/tags/Qt/"/>
     
-    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    <category term="C++" scheme="https://picdream.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>6、绘图和绘图设备</title>
-    <link href="http://picdream.cn/archives/6171531.html"/>
-    <id>http://picdream.cn/archives/6171531.html</id>
+    <link href="https://picdream.cn/2022/06/17/6%E3%80%81%E7%BB%98%E5%9B%BE%E5%92%8C%E7%BB%98%E5%9B%BE%E8%AE%BE%E5%A4%87/"/>
+    <id>https://picdream.cn/2022/06/17/6%E3%80%81%E7%BB%98%E5%9B%BE%E5%92%8C%E7%BB%98%E5%9B%BE%E8%AE%BE%E5%A4%87/</id>
     <published>2022-06-17T00:00:00.000Z</published>
     <updated>2022-07-09T09:58:52.000Z</updated>
     
@@ -184,16 +184,16 @@
     
     
     
-    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    <category term="Qt" scheme="https://picdream.cn/tags/Qt/"/>
     
-    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    <category term="C++" scheme="https://picdream.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>5、Qt消息机制和事件</title>
-    <link href="http://picdream.cn/archives/61270931.html"/>
-    <id>http://picdream.cn/archives/61270931.html</id>
+    <link href="https://picdream.cn/2022/06/12/5%E3%80%81Qt%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6%E5%92%8C%E4%BA%8B%E4%BB%B6/"/>
+    <id>https://picdream.cn/2022/06/12/5%E3%80%81Qt%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6%E5%92%8C%E4%BA%8B%E4%BB%B6/</id>
     <published>2022-06-12T00:00:00.000Z</published>
     <updated>2022-07-09T09:58:50.000Z</updated>
     
@@ -205,16 +205,16 @@
     
     
     
-    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    <category term="Qt" scheme="https://picdream.cn/tags/Qt/"/>
     
-    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    <category term="C++" scheme="https://picdream.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>4、Qt窗口系统</title>
-    <link href="http://picdream.cn/archives/61071251.html"/>
-    <id>http://picdream.cn/archives/61071251.html</id>
+    <link href="https://picdream.cn/2022/06/10/4%E3%80%81Qt%E7%AA%97%E5%8F%A3%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://picdream.cn/2022/06/10/4%E3%80%81Qt%E7%AA%97%E5%8F%A3%E7%B3%BB%E7%BB%9F/</id>
     <published>2022-06-10T00:00:00.000Z</published>
     <updated>2022-07-09T10:05:08.000Z</updated>
     
@@ -255,16 +255,16 @@
     
     
     
-    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    <category term="Qt" scheme="https://picdream.cn/tags/Qt/"/>
     
-    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    <category term="C++" scheme="https://picdream.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>3、信号和槽机制</title>
-    <link href="http://picdream.cn/archives/60870931.html"/>
-    <id>http://picdream.cn/archives/60870931.html</id>
+    <link href="https://picdream.cn/2022/06/08/3%E3%80%81%E4%BF%A1%E5%8F%B7%E5%92%8C%E6%A7%BD%E6%9C%BA%E5%88%B6/"/>
+    <id>https://picdream.cn/2022/06/08/3%E3%80%81%E4%BF%A1%E5%8F%B7%E5%92%8C%E6%A7%BD%E6%9C%BA%E5%88%B6/</id>
     <published>2022-06-08T00:00:00.000Z</published>
     <updated>2022-07-09T09:58:44.000Z</updated>
     
@@ -274,16 +274,16 @@
     
     
     
-    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    <category term="Qt" scheme="https://picdream.cn/tags/Qt/"/>
     
-    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    <category term="C++" scheme="https://picdream.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>2、创建Qt项目</title>
-    <link href="http://picdream.cn/archives/6051431.html"/>
-    <id>http://picdream.cn/archives/6051431.html</id>
+    <link href="https://picdream.cn/2022/06/05/2%E3%80%81%E5%88%9B%E5%BB%BAQt%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://picdream.cn/2022/06/05/2%E3%80%81%E5%88%9B%E5%BB%BAQt%E9%A1%B9%E7%9B%AE/</id>
     <published>2022-06-05T00:00:00.000Z</published>
     <updated>2022-07-09T09:58:42.000Z</updated>
     
@@ -293,16 +293,16 @@
     
     
     
-    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    <category term="Qt" scheme="https://picdream.cn/tags/Qt/"/>
     
-    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    <category term="C++" scheme="https://picdream.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>1、Qt概述</title>
-    <link href="http://picdream.cn/archives/6041302.html"/>
-    <id>http://picdream.cn/archives/6041302.html</id>
+    <link href="https://picdream.cn/2022/06/04/1%E3%80%81Qt%E6%A6%82%E8%BF%B0/"/>
+    <id>https://picdream.cn/2022/06/04/1%E3%80%81Qt%E6%A6%82%E8%BF%B0/</id>
     <published>2022-06-04T13:20:03.000Z</published>
     <updated>2022-07-09T07:38:30.000Z</updated>
     
@@ -312,16 +312,16 @@
     
     
     
-    <category term="Qt" scheme="http://picdream.cn/tags/Qt/"/>
+    <category term="Qt" scheme="https://picdream.cn/tags/Qt/"/>
     
-    <category term="C++" scheme="http://picdream.cn/tags/C/"/>
+    <category term="C++" scheme="https://picdream.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>微信小程序</title>
-    <link href="http://picdream.cn/archives/10001.html"/>
-    <id>http://picdream.cn/archives/10001.html</id>
+    <link href="https://picdream.cn/2018/11/23/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://picdream.cn/2018/11/23/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2018-11-23T13:20:03.000Z</published>
     <updated>2022-07-04T12:25:12.000Z</updated>
     
@@ -331,7 +331,7 @@
     
     
     
-    <category term="java" scheme="http://picdream.cn/tags/java/"/>
+    <category term="java" scheme="https://picdream.cn/tags/java/"/>
     
   </entry>
   
